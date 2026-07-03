@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porthtowan Holiday Guide</title>
+  <style>
+    :root {
+      --navy: #12343b;
+      --teal: #0f6b78;
+      --sea: #dff3f5;
+      --sand: #fff7e6;
+      --cream: #fffdf8;
+      --text: #263238;
+      --muted: #667085;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, var(--sea), var(--sand));
+      color: var(--text);
+      min-height: 100vh;
+      padding: 22px;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: var(--cream);
+      border-radius: 28px;
+      padding: 30px 24px;
+      box-shadow: 0 12px 30px rgba(18, 52, 59, 0.14);
+      border: 1px solid rgba(15, 107, 120, 0.14);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: linear-gradient(90deg, #0f6b78, #74c7cf, #f2c078);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(32px, 7vw, 48px);
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin: 14px 0 22px;
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .map-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .map-button {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px;
+      border-radius: 18px;
+      background: var(--card);
+      text-decoration: none;
+      color: var(--navy);
+      border: 1px solid rgba(18, 52, 59, 0.10);
+      box-shadow: 0 6px 18px rgba(18, 52, 59, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .map-button:hover,
+    .map-button:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(18, 52, 59, 0.14);
+      border-color: rgba(15, 107, 120, 0.35);
+      outline: none;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+      background: #eaf8f9;
+      flex: 0 0 52px;
+    }
+
+    .button-text strong {
+      display: block;
+      font-size: 19px;
+      margin-bottom: 4px;
+    }
+
+    .button-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(15, 107, 120, 0.08);
+      color: #31515a;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .footer {
+      text-align: center;
+      color: rgba(38, 50, 56, 0.65);
+      margin-top: 18px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 520px) {
+      body { padding: 14px; }
+      .hero { padding: 28px 18px; border-radius: 24px; }
+      .map-button { padding: 15px; gap: 12px; }
+      .icon { width: 46px; height: 46px; font-size: 23px; }
+      .button-text strong { font-size: 17px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Cornwall Travel Pack</p>
+      <h1>Porthtowan Holiday Guide</h1>
+      <p class="subtitle">
+        Interactive maps prepared for the journey and stay. Tap a section below to open the map on your phone.
+      </p>
+
+      <div class="map-grid">
+        <a class="map-button" href="interactive-ev-map.html">
+          <div class="icon">🚗</div>
+          <div class="button-text">
+            <strong>EV Charging Map</strong>
+            <span>Suggested charging and comfort stops from Sale to Porthtowan.</span>
+          </div>
+        </a>
+
+        <a class="map-button" href="interactive-realistic-ev-map.html">
+          <div class="icon">🗺️</div>
+          <div class="button-text">
+            <strong>Realistic Route Map</strong>
+            <span>Route overview with labelled journey stops and key locations.</span>
+          </div>
+        </a>
+
+        <a class="map-button" href="interactive-food-map.html">
+          <div class="icon">🍽️</div>
+          <div class="button-text">
+            <strong>Restaurant Map</strong>
+            <span>Recommended restaurants, cafés and casual dining near Porthtowan.</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="note">
+        Tip: save this page to your phone home screen for quick access during the holiday.
+      </div>
+    </section>
+
+    <div class="footer">Holiday planning resources</div>
+  </main>
+</body>
+</html>
